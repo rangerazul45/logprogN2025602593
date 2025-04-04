@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="gabriel"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 07:55:57 p. m."/>
+        <attribute name="created" value="Z2FicmllbDsgZ2FicmllbC1MZW5vdm8taWRlYXBhZC0zMzAtMTVBU1Q7IDIwMjUtMDQtMDM7IDA3OjMyOjUyIHAuIG0uOyA1MDE4"/>
+        <attribute name="edited" value="Z2FicmllbDsgZ2FicmllbC1MZW5vdm8taWRlYXBhZC0zMzAtMTVBU1Q7IDIwMjUtMDQtMDM7IDA3OjU1OjU3IHAuIG0uOyA1MDI4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="h, p, i" type="Real" array="False" size=""/>
+            <output expression="&quot;Ingresa tu altura (m)&quot;"/>
+            <input variable="h"/>
+            <output expression="&quot;Ingresa tu peso (kg)&quot;"/>
+            <input variable="p"/>
+            <assign variable="i" expression="p/(h*h)"/>
+            <output expression="&quot;Indice de masa corporal&quot;"/>
+            <output expression="i"/>
+            <if expression="i&gt;=40">
+                <then>
+                    <output expression="&quot;Obesidad clase 3&quot;"/>
+                </then>
+                <else>
+                    <if expression="i&gt;=35&amp;&amp;i&lt;40">
+                        <then>
+                            <output expression="&quot;obesidad clase 2&quot;"/>
+                        </then>
+                        <else>
+                            <if expression="i&gt;=30&amp;&amp;i&lt;=34.9">
+                                <then>
+                                    <output expression="&quot;Obesidad clase 1&quot;"/>
+                                </then>
+                                <else>
+                                    <if expression="i&gt;=25&amp;&amp;i&lt;=29.9">
+                                        <then>
+                                            <output expression="&quot;Sobre peso&quot;"/>
+                                        </then>
+                                        <else>
+                                            <if expression="i&gt;=18.5&amp;&amp;i&lt;=24.9">
+                                                <then>
+                                                    <output expression="&quot;Normal&quot;"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Bajo peso&quot;"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

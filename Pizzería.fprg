@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Pizzer&#237;a"/>
+        <attribute name="authors" value="gabri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-04-03 08:16:07 p. m."/>
+        <attribute name="created" value="Z2Ficmk7RkFNSUxZUUE7MjAyNS0wNC0wMzswNzo1OTo0NiBwLiBtLjsyNTky"/>
+        <attribute name="edited" value="Z2Ficmk7RkFNSUxZUUE7MjAyNS0wNC0wMzswODoxNjowNyBwLiBtLjsxOzI2OTE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="op, inv, innv" type="Integer" array="False" size=""/>
+            <output expression="&quot;&#191;Que tipo de pizza desea?&quot;" newline="True"/>
+            <output expression="&quot;Vegetariana (1) o no vegetariana (2)&quot;" newline="True"/>
+            <input variable="op"/>
+            <if expression="op==1">
+                <then>
+                    <output expression="&quot;Elija sus ingredientes:&quot;" newline="True"/>
+                    <output expression="&quot;Pimiento (1) o tofu (2)&quot;" newline="True"/>
+                    <input variable="inv"/>
+                    <if expression="inv==1">
+                        <then>
+                            <output expression="&quot;Pizza vegetariana con pimineto&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="inv==2">
+                                <then>
+                                    <output expression="&quot;Pizza vegetariana con tofu&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Opcion ivalida&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="op==2">
+                        <then>
+                            <output expression="&quot;Elija sus ingredientes&quot;" newline="True"/>
+                            <output expression="&quot;Peperono (1), Jamon (2) o Salmon(3)&quot;" newline="True"/>
+                            <input variable="innv"/>
+                            <if expression="innv==1">
+                                <then>
+                                    <output expression="&quot;Pizza no vegetariana con peperoni&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="innv==2">
+                                        <then>
+                                            <output expression="&quot;Pizza no vegetariana con jamon&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="innv==3">
+                                                <then>
+                                                    <output expression="&quot;Pizza no vegetariana con salmon&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Opcion invalida&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;Opcion invalida&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
